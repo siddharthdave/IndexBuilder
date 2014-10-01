@@ -1,0 +1,25 @@
+**************** General Notes  *********************
+1) The code is developed and tested on Windows.
+2) It uses BOOST c++ library ( for hash tables and serialization).
+3) Apart from BOOST there is no other external dependency & this must work on all platforms ( Linux/OS-X)
+
+******************Building  ***********************
+1) Download latest BOOST from: http://www.boost.org/users/download/
+2) Include a reference to the path in the Visual Studio Solution ( or otherwise in the compiler command line option on other platforms)
+3) compile and link !
+
+******************Running **************************
+There are 2 easy steps:
+
+1) First create the index from corpus:
+"CorpusBuilder.exe build path_to_the_tsv_document"
+
+This will create a file '_index.bin'.
+
+2) Load the '_index.bin' file:
+"CorpusBuilder.exe server path_to_index.bin_file"
+
+This will start the sever and now you can enter query in an interactive way. The top3 documents are returned. This may be changed in the code.
+
+
+
